@@ -1,0 +1,9 @@
+Jugador: mau
+Movimientos: 1
+Gano: No
+Jugador: jonh
+Movimientos: 0
+Gano: No
+Jugador: jonh
+Movimientos: 7
+Gano: No

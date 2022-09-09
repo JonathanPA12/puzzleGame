@@ -1,0 +1,25 @@
+# ninja log v5
+2	134	6843310272191949	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+150	294	6843310273803660	puzzleGame.exe	cf3596e65d3fa007
+2	396	6843221371280685	build.ninja	89dcb8d9e5753867
+16	132	6843308690686525	CMakeFiles/puzzleGame.dir/menu.c.obj	79af03ceb91f09f5
+13	149	6843310272350819	CMakeFiles/puzzleGame.dir/juego.c.obj	e152d9fc67a14728
+3	117	6843310683001486	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+14	131	6843310683194866	CMakeFiles/puzzleGame.dir/menu.c.obj	79af03ceb91f09f5
+131	280	6843310684669538	puzzleGame.exe	cf3596e65d3fa007
+2	114	6843313498338399	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+12	121	6843313498434119	CMakeFiles/puzzleGame.dir/menu.c.obj	79af03ceb91f09f5
+121	261	6843313499812162	puzzleGame.exe	cf3596e65d3fa007
+3	125	6843313641705676	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+14	139	6843313641895169	CMakeFiles/puzzleGame.dir/juego.c.obj	e152d9fc67a14728
+139	280	6843313643311367	puzzleGame.exe	cf3596e65d3fa007
+2	128	6843314100240514	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+128	268	6843314101633286	puzzleGame.exe	cf3596e65d3fa007
+2	140	6843315087556380	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+140	300	6843315089178158	puzzleGame.exe	cf3596e65d3fa007
+2	118	6843315755769480	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+118	247	6843315757036877	puzzleGame.exe	cf3596e65d3fa007
+2	175	6843339445743844	CMakeFiles/puzzleGame.dir/main.c.obj	9fdbf8c878706533
+26	184	6843339445823614	CMakeFiles/puzzleGame.dir/menu.c.obj	79af03ceb91f09f5
+15	195	6843339445967430	CMakeFiles/puzzleGame.dir/juego.c.obj	e152d9fc67a14728
+195	350	6843339447497893	puzzleGame.exe	cf3596e65d3fa007

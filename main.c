@@ -2,37 +2,35 @@
 // Created by: Mauren Miranda Q - Jonathan Pineda A
 //
 
+#include <time.h>
 #include "juego.h"
+#include "menu.h"
+
 
 int main () {
 
     archivo = fopen("jugadores.txt", "a+");
     char caracter; //variable para leer un caracter
-    char enter; //variable para leer un enter
+
     srand( time(NULL) * getpid() );
-    llenarMatriz();
-    posicionActual();
-    printf("Introduzca su nombre:");
-    scanf("%s", player.name);
-    //fgets(player.name, sizeof(player.name), stdin);
-    fflush(stdin);
-    //player.cantMovs = 0;
-    imprimirMatriz(matriz);
-    printf("Teclas de juego: a->izquierda, d->derecha, w->arriba, s->abajo, e->salir...\n");
+    iniciar();
+    player.name = menuInicio(FILAS, COLUMNAS, matriz, CANT);//scanf("%s", player.name); //fgets(player.name, sizeof(player.name), stdin);
+
     do{
-        printf("Introduzca su movimiento:");
-        caracter = getchar(); //se lee un caracter de entrada por teclado
-        enter = getchar(); //se lee un enter de entrada por teclado
-        printf("\nHa digitado: %c\n", caracter);
+        caracter = menuMovimiento();
         if(caracter == 'w' || caracter == 's' || caracter == 'd' || caracter == 'a'){
             if(jugada((int)caracter)){
-                imprimirMatriz(matriz);
-                ganar();
+                if(ganar()){
+                    strcpy(player.gano, "Si");
+                    msjGanado();
+                    caracter = 'e';
+                }
+                menuImprimirMatriz(FILAS, COLUMNAS, matriz, CANT);
                 fflush(stdin);
             }
             else{
                 msjMovInvalido();
-                imprimirMatriz(matriz);
+                menuImprimirMatriz(FILAS, COLUMNAS, matriz, CANT);
             }
             player.cantMovs++;
         }
@@ -44,12 +42,18 @@ int main () {
         }
     }while(caracter != 'e');
 
+    if(!ganar()){
+        strcpy(player.gano, "No");
+        msjPerdido();
+    }
+
     printf("name: %s\n", player.name);
     printf("movs: %d\n", player.cantMovs);
 
     guardarMarcador(archivo);
     fclose(archivo);
 
+    free((char*)player.name); // se libera el ptrn de la struct
 
     return 0;
 }
